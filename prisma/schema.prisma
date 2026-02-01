@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:/Users/weihsuan/finance_system/dev.db"
+}
+
+model Indicator {
+  id          String           @id @default(uuid())
+  code        String           @unique
+  name        String
+  type        String
+  frequency   String?
+  description String?
+  lastValue   Float?
+  lastUpdated DateTime?
+  cachedScore Float?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  values      IndicatorValue[]
+}
+
+model IndicatorValue {
+  id          String    @id @default(uuid())
+  indicatorId String
+  date        DateTime
+  value       Float
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  indicator   Indicator @relation(fields: [indicatorId], references: [id], onDelete: Cascade)
+
+  @@unique([indicatorId, date])
+  @@index([date])
+}
