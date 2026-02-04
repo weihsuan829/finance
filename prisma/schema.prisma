@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:/Users/weihsuan/finance_system/dev.db"
+  url      = env("DATABASE_URL")
 }
 
 model Indicator {

@@ -11,6 +11,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 const navItems = [
     { name: "景氣總覽", href: "/", icon: LayoutDashboard },
+    { name: "台灣景氣", href: "/taiwan", icon: LayoutDashboard },
     { name: "指標數據", href: "/indicators", icon: LineChart },
     { name: "市場風險", href: "/market", icon: LineChart },
     { name: "觀察清單", href: "/watchlist", icon: List },

@@ -18,6 +18,20 @@ const SOURCE_MAP: Record<string, string> = {
 
     // Market context
     "market": "SP500",
+
+    // Taiwan indicators - code is used directly as source ID
+    "tw_leading_index": "tw_leading_index",
+    "tw_coincident_index": "tw_coincident_index",
+    "tw_lagging_index": "tw_lagging_index",
+    "tw_signal_score": "tw_signal_score",
+    "tw_export_orders": "tw_export_orders",
+    "tw_stock_index": "tw_stock_index",
+    "tw_m1b": "tw_m1b",
+    "tw_industrial_production": "tw_industrial_production",
+    "tw_manufacturing_sales": "tw_manufacturing_sales",
+    "tw_exports": "tw_exports",
+    "tw_retail_sales": "tw_retail_sales",
+    "tw_unemployment": "tw_unemployment",
 };
 
 export class SyncService {
