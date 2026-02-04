@@ -15,7 +15,7 @@ export default async function TaiwanDashboard() {
     const result = MacroScoringEngine.calculateScore(all);
 
     // Get signal score (景氣對策信號)
-    const signalScore = signal?.lastValue || 0;
+    const signalScore = signal?.value || 0;
     const signalColor = getSignalColor(signalScore);
     const signalLabel = getSignalLabel(signalScore);
 

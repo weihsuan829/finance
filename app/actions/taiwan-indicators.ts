@@ -79,8 +79,8 @@ export async function getTaiwanHistory() {
             return [];
         }
 
-        return indicator.values.map(v => ({
-            date: v.date.toISOString().split('T')[0],
+        return indicator.values.map((v: any) => ({
+            month: v.date.toISOString().split('T')[0],
             score: v.value,
             market: v.value // Use same value for now
         }));

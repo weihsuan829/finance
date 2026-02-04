@@ -76,7 +76,7 @@ export function IndicatorDetailDialog({ open, onOpenChange, indicator }: Indicat
                                 <Tooltip
                                     contentStyle={{ backgroundColor: "#0f172a", borderColor: "#334155", color: "#f8fafc", borderRadius: "8px" }}
                                     itemStyle={{ color: "#f8fafc" }}
-                                    formatter={(value: number) => [value.toFixed(2), "數值"]}
+                                    formatter={(value: number | undefined) => value ? [value.toFixed(2), "數值"] : ["", "數值"]}
                                     labelFormatter={(label) => new Date(label).toLocaleDateString()}
                                 />
                                 <Area
